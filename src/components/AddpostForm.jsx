@@ -47,23 +47,25 @@ const AddpostForm = ({ data, setData, onSuccess, updateData }) => {
   };
 
   return (
-    <div className="bg-white max-w-xl mx-auto p-6 rounded-lg shadow-md">
+    <div className="bg-white max-w-lg mx-auto p-6 rounded-lg shadow-md mt-5">
       <h2 className="text-xl font-semibold text-center text-blue-700 mb-4">
         {isEditMode ? "Edit Post" : "Add New Post"}
       </h2>
-      <form className="space-y-4" onSubmit={handleSubmit}>
+      <form className="space-y-2 " onSubmit={handleSubmit}>
+        <p className="font-medium text-lg">Title:</p>
         <input
           type="text"
           name="title"
           placeholder="Title"
-          className="w-full px-4 py-2 border rounded"
+          className="w-full px-2 py-2 border rounded"
           value={formData.title}
           onChange={handleChange}
         />
+        <p className="font-medium text-lg">Body:</p>
         <textarea
           name="body"
           placeholder="Body"
-          className="w-full px-4 py-2 border rounded"
+          className="w-full px-2 py-2 border rounded"
           value={formData.body}
           onChange={handleChange}
         />
